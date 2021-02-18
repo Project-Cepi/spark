@@ -18,7 +18,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package me.lucko.spark.velocity;
+package me.lucko.spark.minestom;
 
 import com.velocitypowered.api.proxy.ProxyServer;
 import me.lucko.spark.common.platform.AbstractPlatformInfo;

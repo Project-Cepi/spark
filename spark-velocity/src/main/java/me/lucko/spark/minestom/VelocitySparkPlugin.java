@@ -18,11 +18,9 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package me.lucko.spark.velocity;
+package me.lucko.spark.minestom;
 
 import com.google.inject.Inject;
-import com.velocitypowered.api.command.Command;
-import com.velocitypowered.api.command.CommandSource;
 import com.velocitypowered.api.command.SimpleCommand;
 import com.velocitypowered.api.event.PostOrder;
 import com.velocitypowered.api.event.Subscribe;
@@ -34,11 +32,9 @@ import com.velocitypowered.api.proxy.ProxyServer;
 import me.lucko.spark.common.SparkPlatform;
 import me.lucko.spark.common.SparkPlugin;
 import me.lucko.spark.common.platform.PlatformInfo;
-import org.checkerframework.checker.optional.qual.MaybePresent;
 
 import java.nio.file.Path;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
 
 @Plugin(

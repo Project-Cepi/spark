@@ -1,0 +1,37 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '4.0.1'
+}
+
+dependencies {
+    compile project(':spark-common')
+    compileOnly("com.github.Minestom:Minestom:9ed3bd929c")
+    compile("com.github.mworzala:adventure-platform-minestom:2e12f45b2e")
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+    maven { url "https://repo.spongepowered.org/maven" }
+}
+
+processResources {
+    from(sourceSets.main.resources.srcDirs) {
+        expand (
+                'pluginVersion': project.pluginVersion,
+                'pluginDescription': project.pluginDescription
+        )
+        include 'extension.json'
+    }
+}
+
+shadowJar {
+    archiveName = 'spark-minestom.jar'
+
+    exclude 'module-info.class'
+    exclude 'META-INF/maven/**'
+    exclude 'META-INF/proguard/**'
+}
+
+artifacts {
+    archives shadowJar
+    shadow shadowJar
+}
